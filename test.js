@@ -37,10 +37,20 @@ describe('find-script-srcs-in-document', function() {
   });
 
   it('handles https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script', function() {
-    expect(script(fs.readFileSync(__dirname + '/fixtures/script', 'UTF8'))).to.eql([
+    const file = fs.readFileSync(__dirname + '/fixtures/script', 'UTF8')
+
+    expect(script(file)).to.eql([
       'https://cdn.speedcurve.com/js/lux.js?id=108906238',
       '/static/build/js/perf.654b849a6fd9.js',
       '/static/build/js/react-main.ea06fc41fe1f.js'
+    ]);
+  });
+
+  it('handles tc39', function() {
+    const file = fs.readFileSync(__dirname + '/fixtures/tc39', 'UTF8')
+
+    expect(script(file)).to.eql([
+      'ecmarkup.js'
     ]);
   });
 });
