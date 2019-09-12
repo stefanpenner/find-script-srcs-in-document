@@ -5,8 +5,11 @@ Under the hood we [simple-html-tokenizer](https://github.com/tildeio/simple-html
 
 ## Usage
 
+```sh
 yarn add find-script-srcs-in-document
+```
 
+```javascript
 const allScriptSources = require('find-script-srcs-in-document');
 
 // basic
@@ -24,5 +27,6 @@ allScriptSources('<html><script src="foo" data-ignore-me></scripts>', scriptToke
     selfClosing // boolean
   } = scriptToken;
 
-  return attributes.find(attribute => attribute[0] === 'data-ingore-me')
+  return attributes.find(attribute => attribute[0] === 'data-ignore-me')
 })) === [];
+```
