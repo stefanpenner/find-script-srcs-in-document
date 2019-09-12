@@ -1,0 +1,17 @@
+{
+  "name": "find-scripts-srcs-in-document",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "simple-html-tokenizer": "^0.5.8"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  },
+  "files": ["index.js"]
+}
