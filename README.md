@@ -1,4 +1,5 @@
 # find-script-srcs-in-document
+[![Build Status](https://travis-ci.org/stefanpenner/find-script-srcs-in-document.svg?branch=master)](https://travis-ci.org/stefanpenner/find-script-srcs-in-document)
 
 A quick and simple took to find all script src's in a given HTML document.
 Under the hood we [simple-html-tokenizer](https://github.com/tildeio/simple-html-tokenizer) to parse the document.
